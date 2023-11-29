@@ -23,6 +23,7 @@ void GLAPIENTRY glErrorCallback(
 )
 {
 	// To improve this see https://www.khronos.org/opengl/wiki/Debug_Output
+	// Should this make use of glHandleErrors below?
 	fprintf(stderr,
 		"OpenGL Error: type = 0x%x, severity = 0x%x, message = %s\n",
 		type, severity, message
