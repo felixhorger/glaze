@@ -87,7 +87,8 @@ void glCheckShaderProgram(
 
 
 
-GLuint glMakeShader(GLenum type, const char* const* source)
+// Needs to be null terminated
+GLuint glMakeShader(GLenum type, const char** source)
 {
 	GLuint shader = glCreateShader(type);
 	glShaderSource(shader, 1, source, NULL);
